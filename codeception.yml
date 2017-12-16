@@ -1,0 +1,7 @@
+include:
+    - common
+    - application
+paths:
+    log: console/runtime/logs
+settings:
+    colors: true

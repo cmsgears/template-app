@@ -1,0 +1,14 @@
+BrowserMatch MSIE ie
+Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+
+RewriteEngine On
+
+# pass all the non uploads and non admin requests to application application
+RewriteCond %{REQUEST_URI} !^/(appdemo/uploads)
+RewriteRule !(application/web) /appdemo/application/web%{REQUEST_URI} [L]
+
+# handle application application requests
+RewriteCond %{REQUEST_URI} ^/appdemo/application/web
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\?*$ /appdemo/application/web/index.php/$1 [L,QSA]
