@@ -13,6 +13,7 @@ class m171218_150848_app extends \yii\db\Migration {
 	// Private Variables
 
 	private $cmgPrefix;
+	private $sitePrefix;
 	private $appPrefix;
 
 	private $master;
@@ -21,6 +22,7 @@ class m171218_150848_app extends \yii\db\Migration {
 
 		// Table prefix
 		$this->cmgPrefix	= Yii::$app->migration->cmgPrefix;
+		$this->sitePrefix	= Yii::$app->migration->sitePrefix;
 		$this->appPrefix	= Yii::$app->migration->appPrefix;
 
 		$this->master	= User::findByUsername( Yii::$app->migration->getSiteMaster() );
