@@ -1,2 +1,4 @@
 ./yii migrate/down --migrationPath=@console/migrations/data --interactive=0
 ./yii migrate/down --migrationPath=@themes/app/migrations --interactive=0
+./yii migrate/down --migrationPath=@console/migrations/app --interactive=0
+./yii migrate/down --migrationPath=@cmsgears/module-app/migrations --interactive=0

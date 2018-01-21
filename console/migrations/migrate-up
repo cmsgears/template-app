@@ -1,2 +1,4 @@
+./yii migrate/up --migrationPath=@cmsgears/module-app/migrations --interactive=0
+./yii migrate/up --migrationPath=@console/migrations/app --interactive=0
 ./yii migrate/up --migrationPath=@themes/app/migrations --interactive=0
 ./yii migrate/up --migrationPath=@console/migrations/data --interactive=0
