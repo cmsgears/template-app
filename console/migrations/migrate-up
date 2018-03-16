@@ -1,4 +1,6 @@
+# Run app module migration if not done yet by any other application of same project
 ./yii migrate/up --migrationPath=@cmsgears/module-app/migrations --interactive=0
+# App migrations
 ./yii migrate/up --migrationPath=@console/migrations/app --interactive=0
 ./yii migrate/up --migrationPath=@themes/app/migrations --interactive=0
 ./yii migrate/up --migrationPath=@console/migrations/data --interactive=0

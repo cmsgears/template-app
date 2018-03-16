@@ -1,4 +1,5 @@
+# Migrate down only app specific data
 ./yii migrate/down --migrationPath=@console/migrations/data --interactive=0
 ./yii migrate/down --migrationPath=@themes/app/migrations --interactive=0
 ./yii migrate/down --migrationPath=@console/migrations/app --interactive=0
-./yii migrate/down --migrationPath=@cmsgears/module-app/migrations --interactive=0
+# No need to migrate down app module since it might be in use by different application of same project
